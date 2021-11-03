@@ -4,17 +4,21 @@
 #   if not provided, then default to openemr, openemr, admin, and pass respectively.
 version: '3.1'
 services:
+  fhir:
+    image: conceptant/hapi-fhir
+    ports:
+    - 8080:8080
   mysql:
     restart: always
-    image: mariadb:10.5
-    command: ['mysqld','--character-set-server=utf8mb4']
+    image: mariadb:10.2
+    command: ['mysqld','--character-set-server=utf8']
     volumes:
     - databasevolume:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
   openemr:
     restart: always
-    image: openemr/openemr:6.0.0
+    image: openemr/openemr:5.0.1
     ports:
     - 80:80
     - 443:443

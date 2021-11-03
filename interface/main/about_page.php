@@ -28,32 +28,32 @@ use OpenEMR\Services\VersionService;
 <head>
 
     <?php Header::setupHeader(); ?>
-    <title><?php echo xlt("About");?> OpenEMR</title>
+    <title><?php echo xlt("About");?> BioSerenity</title>
     <style>
         .donations-needed {
             margin-top: 25px;
             margin-bottom: 25px;
-            color: #c9302c;
+            color: #2c77c9;
         }
         .donations-needed a, .donations-needed a:visited,
         .donations-needed a:active {
-            color: #c9302c;
+            color: #2c77c9;
         }
         .donations-needed a.btn {
-            color: #c9302c;
+            color: #2c77c9;
             text-align: center;
             font-size: 1.5em;
             font-weight: bold;
             animation: all 2s;
         }
         .donations-needed a.btn:hover {
-            background-color: #c9302c;
+            background-color: #2c77c9;
             color: #fff;
         }
         .donations-needed .btn {
             border-radius: 8px;
-            border: 2px solid #c9302c;
-            color: #c9302c;
+            border: 2px solid #2c77c9;
+            color: #2c77c9;
             background-color: transparent;
         }
     </style>
@@ -105,7 +105,7 @@ $version = $versionService->fetch();
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-4 offset-md-4 text-center">
-                <h1><?php echo xlt("About");?>&nbsp;OpenEMR</h1>
+                <h1><?php echo xlt("About");?>&nbsp;BioSerenity</h1>
                 <h4><?php echo xlt('Version Number'); ?>: <?php echo "v" . text($openemr_version); ?></h4>
                 <span class="text product-registration"><span class="email"></span></span><br />
                 <?php if (!empty($GLOBALS['support_phone_number'])) { ?>
@@ -117,8 +117,8 @@ $version = $versionService->fetch();
                 <?php } ?>
                 <a href="../../acknowledge_license_cert.html" rel="noopener" target="_blank" class="btn btn-secondary btn-block"><i class="fa fa-fw fa-info-circle"></i><?php echo xlt('Acknowledgments, Licensing and Certification'); ?></a>
                 <div class="donations-needed">
-                    <span class="text"><?php echo xlt("Please consider sending in a donation to"); ?> OpenEMR:</span><br />
-                    <a href="https://www.open-emr.org/donate/" rel="noopener" target="_blank" class="btn btn-lg btn-block"><i class="fa fa-2x fa-heart"></i><br /><?php echo xlt("DONATE NOW!"); ?></a>
+                    <span class="text"><?php echo xlt("Please have a look to"); ?> BioSerenity services:</span><br />
+                    <a href="https://www.bioserenity.com/recherche-et-essais-cliniques/" rel="noopener" target="_blank" class="btn btn-lg btn-block"></i><br /><?php echo xlt("More information about BioSerenity!"); ?></a>
                 </div>
                 <div class="review mb-5">
                     <a href="https://www.softwareadvice.com/medical/openemr-review/?step=1" title="<?php echo xla("Voice your opinion"); ?>" rel="noopener" target="_blank"><?php echo file_get_contents($GLOBALS['images_static_absolute'] . "/review-logo.svg"); ?></a>
